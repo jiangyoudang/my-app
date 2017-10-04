@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    <div *ngIf="title">
+      Welcome {{title}}!
+    </div>
+  </h1>
+
+
+</div>
+<h3>Material Design: </h3>
+<div>
+  <md-form-field>
+    <input mdInput placeholder="Title" [(ngModel)]="title">
+    <md-icon mdSuffix>mode_edit</md-icon>
+  </md-form-field>
+  <p>Using references to bind instead of ngModel: {{ name.value}}</p>
+  <md-form-field>
+    <input mdInput placeholder="Name" #name>
+  </md-form-field>
+</div>
+<div class="center" *ngFor="">
+  <button md-button color="primary">Primary</button>
+  <button md-raised-button color="primary">Material button</button>
+  <button md-raised-button color="warn">Warn</button>
+  <button md-fab color="accent">Accent</button>
+  <button md-fab disabled>Disabled</button>
+</div>
+
+<sub></sub>
