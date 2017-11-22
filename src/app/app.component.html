@@ -10,21 +10,36 @@
 </div>
 <h3>Material Design: </h3>
 <div>
-  <md-form-field>
-    <input mdInput placeholder="Title" [(ngModel)]="title">
-    <md-icon mdSuffix>mode_edit</md-icon>
-  </md-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Title" [(ngModel)]="title">
+    <mat-icon matSuffix>mode_edit</mat-icon>
+  </mat-form-field>
   <p>Using references to bind instead of ngModel: {{ name.value}}</p>
-  <md-form-field>
-    <input mdInput placeholder="Name" #name>
-  </md-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Name" #name>
+  </mat-form-field>
 </div>
 <div class="center" *ngFor="let a of repeat">
-  <button md-button color="primary">Primary</button>
-  <button md-raised-button color="primary">Material button</button>
-  <button md-raised-button color="warn">Warn</button>
-  <button md-fab color="accent">Accent</button>
-  <button md-fab disabled>Disabled</button>
+  <button mat-button color="primary" (click)="init()">Init observable</button>
+  <button mat-raised-button color="primary">Material button</button>
+  <button mat-raised-button color="warn">Warn</button>
+  <button mat-fab color="accent">Accent</button>
+  <button mat-fab disabled>Disabled</button>
+</div>
+<p> Values (Observable) : </p>
+<p *ngFor="let v of values">
+  {{v}}
+</p>
+
+
+<router-outlet></router-outlet>
+
+<br>
+
+<div>
+  Github API:
+  <app-ghub></app-ghub>
 </div>
 
-<sub></sub>
+<!--show content-->
+<ng-content></ng-content>

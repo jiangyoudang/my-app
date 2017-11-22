@@ -1,8 +1,8 @@
 import {TestBed, async} from '@angular/core/testing';
 import {AppComponent} from './app.component';
 import {FormsModule} from '@angular/forms';
-import  {MdButtonModule, MdInputModule, MdIconModule} from "@angular/material";
-import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatButtonModule, MatInputModule, MatIconModule} from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -12,9 +12,9 @@ describe('AppComponent', () => {
       ],
       imports: [
         FormsModule,
-        MdInputModule,
-        MdButtonModule,
-        MdIconModule,
+        MatInputModule,
+        MatButtonModule,
+        MatIconModule,
         BrowserAnimationsModule
       ]
     }).compileComponents();
